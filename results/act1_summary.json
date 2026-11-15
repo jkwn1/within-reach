@@ -1,0 +1,321 @@
+{
+  "postings_raw": 140816,
+  "posting_date_min": "2025-01-01",
+  "posting_date_max": "2026-09-21",
+  "postings_after_dedupe": 136136,
+  "share_with_parseable_pay": 0.8489084444966798,
+  "share_salary_text_present": 0.8540797437856261,
+  "share_matched_to_place": 0.9382382323558794,
+  "bay_area_postings": 45312,
+  "bay_area_share_with_pay": 0.8435734463276836,
+  "entry_share": 0.5790386084503731,
+  "bay_tracts": 1578,
+  "bay_tracts_with_outcome": 1568,
+  "tracts_with_zero_entry_jobs_10mi": 4,
+  "tracts_in_quintile_comparison": 1564,
+  "median_entry_pay_10mi_by_mobility_quintile": [
+    57200.0,
+    55120.0,
+    58240.0,
+    65000.0,
+    67500.0
+  ],
+  "median_n_entry_10mi_by_mobility_quintile": [
+    1515.0,
+    1053.0,
+    1535.0,
+    1828.0,
+    2381.0
+  ],
+  "median_entry_pay_by_mobility_quintile_all_radii": {
+    "5": [
+      56368.0,
+      55120.0,
+      56992.0,
+      57813.600000000006,
+      62400.0
+    ],
+    "10": [
+      57200.0,
+      55120.0,
+      58240.0,
+      65000.0,
+      67500.0
+    ],
+    "20": [
+      64896.0,
+      64490.0,
+      67007.20000000001,
+      67810.2,
+      69212.0
+    ]
+  },
+  "licensed_titles_excluded_from_entry": 3357,
+  "spearman_with_outcome": {
+    "pay_entry_5": {
+      "rho": 0.1514237911245514
+    },
+    "pay_entry_nodeg_5": {
+      "rho": 0.15198898448005402
+    },
+    "n_entry_5": {
+      "rho": 0.0839647567688667
+    },
+    "pay_entry_10": {
+      "rho": 0.21871151894392965
+    },
+    "pay_entry_nodeg_10": {
+      "rho": 0.1882499325151306
+    },
+    "n_entry_10": {
+      "rho": 0.13208555344361309
+    },
+    "pay_entry_20": {
+      "rho": 0.26102277348044844
+    },
+    "pay_entry_nodeg_20": {
+      "rho": 0.20882728220427094
+    },
+    "n_entry_20": {
+      "rho": 0.08446014691055567
+    },
+    "poor_share2010": {
+      "rho": -0.4541744770544461
+    },
+    "frac_coll_plus2010": {
+      "rho": 0.44868365092067847
+    },
+    "med_hhinc2016": {
+      "rho": 0.5088398878944602
+    },
+    "jobs_highpay_5mi_2015": {
+      "rho": 0.11657590555039932
+    },
+    "jobs_total_5mi_2015": {
+      "rho": 0.10150117324400469
+    }
+  },
+  "incremental": {
+    "pay_entry_5": {
+      "n_tracts": 1537.0,
+      "n_clusters": 68.0,
+      "r2_base": 0.2291242556009918,
+      "r2_with_measure": 0.23290608932691237,
+      "delta_r2": 0.003781833725920558,
+      "coef_per_sd": 0.00442784454816996,
+      "coef_ci95_clustered": [
+        -0.003696483886762451,
+        0.01255217298310237
+      ],
+      "p_value_clustered": 0.2854298490728556,
+      "heldout_county_r2_base": 0.05495407595443055,
+      "heldout_county_r2_with_measure": 0.06911170430712674
+    },
+    "pay_entry_5__weighted_by_children": {
+      "n_tracts": 1537.0,
+      "n_clusters": 68.0,
+      "r2_base": 0.34124477946565335,
+      "r2_with_measure": 0.34989528381164026,
+      "delta_r2": 0.008650504345986909,
+      "coef_per_sd": 0.007062805826431545,
+      "coef_ci95_clustered": [
+        -0.004323896125177501,
+        0.01844950777804059
+      ],
+      "p_value_clustered": 0.22409817040618807,
+      "heldout_county_r2_base": 0.05495407595443055,
+      "heldout_county_r2_with_measure": 0.06911170430712674
+    },
+    "pay_entry_10": {
+      "n_tracts": 1564.0,
+      "n_clusters": 75.0,
+      "r2_base": 0.2309514797031328,
+      "r2_with_measure": 0.23730432459031703,
+      "delta_r2": 0.006352844887184239,
+      "coef_per_sd": 0.005752890854736438,
+      "coef_ci95_clustered": [
+        -0.005250183383667754,
+        0.016755965093140632
+      ],
+      "p_value_clustered": 0.3054786524176466,
+      "heldout_county_r2_base": 0.058858763729962585,
+      "heldout_county_r2_with_measure": 0.08570368300949098
+    },
+    "pay_entry_10__weighted_by_children": {
+      "n_tracts": 1564.0,
+      "n_clusters": 75.0,
+      "r2_base": 0.3422754687478564,
+      "r2_with_measure": 0.36291864041954436,
+      "delta_r2": 0.020643171671687943,
+      "coef_per_sd": 0.010253903594714155,
+      "coef_ci95_clustered": [
+        -0.002170376332648825,
+        0.022678183522077136
+      ],
+      "p_value_clustered": 0.1057528813973999,
+      "heldout_county_r2_base": 0.058858763729962585,
+      "heldout_county_r2_with_measure": 0.08570368300949098
+    },
+    "pay_entry_20": {
+      "n_tracts": 1568.0,
+      "n_clusters": 79.0,
+      "r2_base": 0.23177341335464652,
+      "r2_with_measure": 0.24731051764489131,
+      "delta_r2": 0.015537104290244796,
+      "coef_per_sd": 0.008579232420093941,
+      "coef_ci95_clustered": [
+        0.0020930066745489537,
+        0.01506545816563893
+      ],
+      "p_value_clustered": 0.009530482971127024,
+      "heldout_county_r2_base": 0.062198114571343645,
+      "heldout_county_r2_with_measure": 0.11721546164561608
+    },
+    "pay_entry_20__weighted_by_children": {
+      "n_tracts": 1568.0,
+      "n_clusters": 79.0,
+      "r2_base": 0.34216481328812176,
+      "r2_with_measure": 0.37219014352153423,
+      "delta_r2": 0.030025330233412473,
+      "coef_per_sd": 0.01094254497678084,
+      "coef_ci95_clustered": [
+        0.004746050988855411,
+        0.01713903896470627
+      ],
+      "p_value_clustered": 0.00053787338179922,
+      "heldout_county_r2_base": 0.062198114571343645,
+      "heldout_county_r2_with_measure": 0.11721546164561608
+    },
+    "pay_entry_nodeg_5": {
+      "n_tracts": 1536.0,
+      "n_clusters": 68.0,
+      "r2_base": 0.22917607541553464,
+      "r2_with_measure": 0.23507713744192693,
+      "delta_r2": 0.00590106202639229,
+      "coef_per_sd": 0.0055011435632141715,
+      "coef_ci95_clustered": [
+        -0.0019900831452434814,
+        0.012992370271671824
+      ],
+      "p_value_clustered": 0.1500685424599116,
+      "heldout_county_r2_base": 0.05488664192501244,
+      "heldout_county_r2_with_measure": 0.0723950230091559
+    },
+    "pay_entry_nodeg_5__weighted_by_children": {
+      "n_tracts": 1536.0,
+      "n_clusters": 68.0,
+      "r2_base": 0.34124651204339107,
+      "r2_with_measure": 0.3532901760838053,
+      "delta_r2": 0.012043664040414237,
+      "coef_per_sd": 0.008263458624237628,
+      "coef_ci95_clustered": [
+        -0.0028697771961739144,
+        0.01939669444464917
+      ],
+      "p_value_clustered": 0.1457383236669964,
+      "heldout_county_r2_base": 0.05488664192501244,
+      "heldout_county_r2_with_measure": 0.0723950230091559
+    },
+    "pay_entry_nodeg_10": {
+      "n_tracts": 1564.0,
+      "n_clusters": 75.0,
+      "r2_base": 0.2309514797031328,
+      "r2_with_measure": 0.23682141794149214,
+      "delta_r2": 0.005869938238359351,
+      "coef_per_sd": 0.005472353384713946,
+      "coef_ci95_clustered": [
+        -0.006292895538715511,
+        0.017237602308143404
+      ],
+      "p_value_clustered": 0.36196076418742007,
+      "heldout_county_r2_base": 0.058858763729962585,
+      "heldout_county_r2_with_measure": 0.07513056714539787
+    },
+    "pay_entry_nodeg_10__weighted_by_children": {
+      "n_tracts": 1564.0,
+      "n_clusters": 75.0,
+      "r2_base": 0.3422754687478564,
+      "r2_with_measure": 0.3613695865177843,
+      "delta_r2": 0.019094117769927865,
+      "coef_per_sd": 0.00963012663223891,
+      "coef_ci95_clustered": [
+        -0.00354225008144342,
+        0.022802503345921238
+      ],
+      "p_value_clustered": 0.15188635712538492,
+      "heldout_county_r2_base": 0.058858763729962585,
+      "heldout_county_r2_with_measure": 0.07513056714539787
+    },
+    "pay_entry_nodeg_20": {
+      "n_tracts": 1568.0,
+      "n_clusters": 79.0,
+      "r2_base": 0.23177341335464652,
+      "r2_with_measure": 0.2423183111402164,
+      "delta_r2": 0.010544897785569884,
+      "coef_per_sd": 0.007115378881903769,
+      "coef_ci95_clustered": [
+        -0.0006110671714203361,
+        0.014841824935227874
+      ],
+      "p_value_clustered": 0.0710817461862528,
+      "heldout_county_r2_base": 0.062198114571343645,
+      "heldout_county_r2_with_measure": 0.09624144510793801
+    },
+    "pay_entry_nodeg_20__weighted_by_children": {
+      "n_tracts": 1568.0,
+      "n_clusters": 79.0,
+      "r2_base": 0.34216481328812176,
+      "r2_with_measure": 0.3626280578775479,
+      "delta_r2": 0.020463244589426166,
+      "coef_per_sd": 0.00932070574490321,
+      "coef_ci95_clustered": [
+        0.0012859581791732945,
+        0.017355453310633127
+      ],
+      "p_value_clustered": 0.02298671087636494,
+      "heldout_county_r2_base": 0.062198114571343645,
+      "heldout_county_r2_with_measure": 0.09624144510793801
+    },
+    "jobs_highpay_5mi_2015": {
+      "n_tracts": 1568.0,
+      "n_clusters": 79.0,
+      "r2_base": 0.23177341335464652,
+      "r2_with_measure": 0.2324823133188595,
+      "delta_r2": 0.0007088999642129723,
+      "coef_per_sd": 0.0018996900935798913,
+      "coef_ci95_clustered": [
+        -0.002973637848637495,
+        0.006773018035797277
+      ],
+      "p_value_clustered": 0.44485481661307935,
+      "heldout_county_r2_base": 0.062198114571343645,
+      "heldout_county_r2_with_measure": 0.06844821078149003
+    },
+    "jobs_highpay_5mi_2015__weighted_by_children": {
+      "n_tracts": 1568.0,
+      "n_clusters": 79.0,
+      "r2_base": 0.34216481328812176,
+      "r2_with_measure": 0.3523312860202422,
+      "delta_r2": 0.010166472732120457,
+      "coef_per_sd": 0.007443507500403238,
+      "coef_ci95_clustered": [
+        0.0006319372753339353,
+        0.014255077725472541
+      ],
+      "p_value_clustered": 0.03220975067666665,
+      "heldout_county_r2_base": 0.062198114571343645,
+      "heldout_county_r2_with_measure": 0.06844821078149003
+    }
+  },
+  "degree_premium_bay_entry": {
+    "n_postings": 17892,
+    "share_degree_required": 0.1791303375810418,
+    "median_pay_degree": 104509.6,
+    "median_pay_no_degree": 57200.0,
+    "premium_within_family_city_pct": 18.77112424058147,
+    "premium_ci95_pct_company_clustered": [
+      14.60403357923099,
+      23.08973351814112
+    ]
+  }
+}

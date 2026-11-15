@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Within Reach College Finder</title>
+<style>
+  :root { --blue:#2a78d6; --orange:#eb6834; --ink:#0b0b0b; --ink2:#52514e; --muted:#7a7873; --line:#e6e4df;
+          --surface:#fcfcfb; --card:#ffffff; --good:#1f7a4d; --bad:#b4441a; --tint:#eef4fc; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif; color:var(--ink);
+         background:var(--surface); line-height:1.45; }
+  header { padding:28px 20px 8px; max-width:1100px; margin:0 auto; }
+  h1 { font-size:28px; margin:0 0 6px; letter-spacing:-0.01em; }
+  h2 { font-size:19px; margin:0 0 10px; }
+  .lede { color:var(--ink2); margin:0 0 4px; max-width:820px; }
+  main { max-width:1100px; margin:0 auto; padding:0 20px 40px; }
+  section { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:18px; margin:16px 0; }
+  label { font-size:13px; color:var(--ink2); display:block; margin-bottom:4px; }
+  input[type=text], input[type=number], select { font:inherit; padding:9px 10px; border:1px solid #cfccc5;
+         border-radius:8px; background:#fff; width:100%; }
+  input:focus, select:focus, button:focus { outline:2px solid var(--blue); outline-offset:1px; }
+  .row { display:flex; gap:12px; flex-wrap:wrap; align-items:flex-end; }
+  .row > div { flex:1 1 160px; }
+  .matches { list-style:none; margin:8px 0 0; padding:0; max-height:260px; overflow:auto; border:1px solid var(--line);
+             border-radius:8px; display:none; }
+  .matches li button { all:unset; display:block; width:100%; padding:8px 10px; cursor:pointer; box-sizing:border-box; }
+  .matches li button:hover, .matches li button:focus { background:var(--tint); }
+  .muted { color:var(--muted); font-size:13px; }
+  .card h3 { margin:0; font-size:21px; }
+  .facts { display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:10px; margin:14px 0; }
+  .fact { background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:10px; }
+  .fact .k { font-size:12px; color:var(--ink2); }
+  .fact .v { font-size:20px; font-weight:700; }
+  .badge { display:inline-block; font-size:12px; padding:2px 8px; border-radius:999px; margin:6px 6px 0 0;
+           border:1px solid var(--line); color:var(--ink2); background:var(--surface); }
+  .badge.opp { border-color:var(--blue); color:var(--blue); background:var(--tint); font-weight:600; }
+  .note { font-size:13px; color:var(--ink2); background:#fff7f2; border-left:3px solid var(--orange); padding:8px 10px;
+          border-radius:4px; margin-top:10px; }
+  .pos { color:var(--good); font-weight:700; } .neg { color:var(--bad); font-weight:700; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th, td { text-align:left; padding:8px 6px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-size:12px; color:var(--ink2); font-weight:600; position:sticky; top:0; background:var(--card); }
+  td.num, th.num { text-align:right; white-space:nowrap; }
+  tbody tr:hover { background:var(--tint); cursor:pointer; }
+  .tablewrap { max-height:520px; overflow:auto; border:1px solid var(--line); border-radius:8px; }
+  .options { margin-top:14px; }
+  .opt { border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin:8px 0; }
+  .opt .name { font-weight:700; }
+  button.link { all:unset; color:var(--blue); cursor:pointer; text-decoration:underline; }
+  footer { max-width:1100px; margin:0 auto; padding:0 20px 40px; font-size:13px; color:var(--ink2); }
+  footer li { margin:4px 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Within Reach College Finder</h1>
+  <p class="lede">For low-income students and the counselors who help them. Look up a college to see how its former
+  students do compared with colleges that enroll <em>similar</em> students, what it costs a family earning up to
+  $30,000, and whether a nearby college with similar students did better for the same price or less.</p>
+  <p class="muted" id="count"></p>
+</header>
+<main>
+  <section aria-labelledby="look">
+    <h2 id="look">1. Look up a college</h2>
+    <label for="q">College name</label>
+    <input id="q" type="text" placeholder="e.g. East Los Angeles College" autocomplete="off">
+    <ul class="matches" id="matches" aria-label="Matching colleges"></ul>
+    <div id="detail" class="card" style="margin-top:14px"></div>
+  </section>
+
+  <section aria-labelledby="browse">
+    <h2 id="browse">2. Browse colleges near you</h2>
+    <div class="row">
+      <div><label for="st">State</label><select id="st"></select></div>
+      <div><label for="lv">Type</label><select id="lv"><option value="">All</option><option>4-year</option>
+        <option>2-year</option><option>Under 2-year</option></select></div>
+      <div><label for="mx">Max price for a family earning up to $30,000</label><input id="mx" type="number" min="0" step="500" placeholder="any"></div>
+      <div><label for="ct">City contains</label><input id="ct" type="text" placeholder="any"></div>
+    </div>
+    <p class="muted">Sorted by name. Value-added: how much more (or less) former students earn than the model expects for
+    colleges with the same kind of students. Tribal, specialized, online-by-design and closed colleges are not rated.
+    Click a row for details and nearby options.</p>
+    <div class="tablewrap"><table>
+      <thead><tr><th>College</th><th>City</th><th>Type</th><th class="num">Price</th><th class="num">Pell share</th>
+      <th class="num">Earnings</th><th class="num">Expected</th><th class="num">Value-added</th></tr></thead>
+      <tbody id="rows"></tbody></table></div>
+    <p class="muted" id="shown"></p>
+  </section>
+</main>
+<footer>
+  <h2 style="font-size:16px">How to read this, and its limits</h2>
+  <ul>
+    <li><b>Earnings</b>: median earnings of former students (dependent students who received federal aid, working and
+      not enrolled), 10 years after they entered, whether or not they graduated. <b>Expected</b>: what our model predicts
+      from who enrolls (Pell share, age, part-time share, test scores, admission rate, type, state and similar inputs).
+      It never sees the earnings of the college it predicts.</li>
+    <li><b>Price</b>: average yearly net price (cost of attendance including living costs, minus grants) for aided
+      students from families earning $0-30,000 (Affordability Gap AY2022-23). Below $0 means grants exceed the full cost on average.</li>
+    <li><b>Value-added is not proof that the college caused the difference.</b> Some of it can come from differences
+      between students that the data does not capture, from the mix of programs a college offers, or from noise.
+      Use it to build a shortlist, then compare the specific programs you want.</li>
+    <li><b>Stronger option nearby</b> ("also consider"): within 25 miles (straight line), same level (bachelor's, 2-year or under 2-year)
+      and same kind of institution, similar expected earnings (within 10%), Pell share at most 10 points lower, no higher
+      price for low-income families, no harder to get into (open admissions, or an admission rate at most 10 points
+      lower), and value-added at least 10 points higher with and without race inputs. <b>About the same</b>: comparable
+      colleges nearby, none stronger by that rule. Tribal, specialized, online-by-design and closed colleges are not
+      compared, and single-gender colleges are never suggested. In a test on a different group of students
+      (independent students, not a model input), suggested colleges also had higher earnings much more often than other
+      comparable colleges nearby did, so the gaps aren't just noise.</li>
+    <li>Data describe students who entered college about 15 years ago; colleges change, close and merge. Check that a college is still open.</li>
+    <li>Only colleges with 500+ students, their own earnings figure, and known price and Pell share are shown
+      (__N__ colleges). Earnings data: College Results View 2021. Prices: Affordability Gap AY2022-23.</li>
+    <li>Code and method: the Within Reach repository (README.md). Built for the 8th Annual Datathon for Social Good.</li>
+  </ul>
+</footer>
+<script>
+const DATA = /*__DATA__*/;
+const C = DATA.colleges, byId = new Map(C.map(c => [c.id, c]));
+const fmt$ = v => (v < 0 ? "−$" : "$") + Math.round(Math.abs(v)).toLocaleString("en-US");
+const pct = v => (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(1) + "%";
+const miles$ = m => m < 1 ? "under 1 mile" : m.toFixed(1) + " miles";
+const norm = t => String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[\u2018\u2019\u02bc`]/g, "'").replace(/&/g, " and ").replace(/\bsaint\b/g, "st").replace(/[.',()\/-]/g, " ").replace(/\s+/g, " ").trim();
+const price$ = v => v < 0 ? "$0 (aid exceeds costs)" : fmt$(v);
+const esc = s => String(s).replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+document.getElementById("count").textContent =
+  C.length.toLocaleString("en-US") + " colleges · data from College Results View 2021 and Affordability Gap AY2022-23";
+
+function vaWords(c) {
+  const v = c.va;
+  if (Math.abs(v) < 2) return "Former students earn about what the model expects for similar students.";
+  return "Former students earn " + Math.abs(v).toFixed(0) + "% " + (v > 0 ? "more" : "less") +
+         " than the model expects for colleges with similar students.";
+}
+function badges(c) {
+  let b = "";
+  if (c.op && !c.nc) b += '<span class="badge opp">Opportunity college: high value-added, many Pell students, low price</span>';
+  const names = {HBCU:"Historically Black college", HSI:"Hispanic-serving", TCU:"Tribal college",
+                 PBI:"Predominantly Black institution", AANAPISI:"Asian American / Pacific Islander-serving"};
+  c.msi.forEach(m => b += '<span class="badge">' + names[m] + '</span>');
+  return b;
+}
+function show(id) {
+  const c = byId.get(id); if (!c) return;
+  const d = document.getElementById("detail");
+  let h = '<h3>' + esc(c.n) + '</h3><div class="muted">' + esc(c.c) + ", " + esc(c.s) + " · " + esc(c.sec) + " · " +
+          c.en.toLocaleString("en-US") + " students</div>" + badges(c);
+  h += '<div class="facts">' +
+       '<div class="fact"><div class="k">Yearly net price for families earning up to $30,000</div><div class="v">' + price$(c.pr) + '</div></div>' +
+       '<div class="fact"><div class="k">First-time, full-time students with Pell grants</div><div class="v">' + Math.round(c.pe) + '%</div></div>' +
+       '<div class="fact"><div class="k">Former students\' median earnings, 10 years after entry</div><div class="v">' + fmt$(c.ea) + '</div></div>' +
+       '<div class="fact"><div class="k">Expected for similar students</div><div class="v">' + (c.nc ? "not rated" : fmt$(c.ex)) + '</div></div>' +
+       '<div class="fact"><div class="k">Value-added</div><div class="v ' + (c.nc ? "" : (c.va >= 0 ? "pos" : "neg")) + '">' + (c.nc ? "not rated" : pct(c.va)) + '</div></div>' +
+       '<div class="fact"><div class="k">First-time, full-time Pell students who finished within 6 years</div><div class="v">' + (c.pc == null ? "n/a" : Math.round(c.pc) + "%") + '</div></div>' +
+       '</div><p>' + (c.nc ? "This college is not rated or compared (see below)." : vaWords(c)) + '</p>';
+  const why = {tribal: "Tribal colleges are not compared: the model is less accurate for them (it over-predicts their earnings), so their value-added may be understated.",
+               specialized: "Specialized colleges are not compared: their earnings mostly reflect their field, not the college.",
+               online: "Online-by-design colleges are not compared: distance does not matter for them.",
+               closed: "This college has closed or merged since the data were collected."};
+  h += '<div class="options">' + (c.nc ? '' : '<h2 style="font-size:17px">Within 25 miles</h2>');
+  const optHtml = (list, strong) => list.map(([oid, miles]) => {
+      const o = byId.get(oid);
+      const de = o.ea - c.ea, dp = o.pr - c.pr;
+      return '<div class="opt"><div class="name"><button class="link" data-id="' + o.id + '">' + esc(o.n) + '</button></div>' +
+        '<div class="muted">' + esc(o.c) + ", " + esc(o.s) + " · " + miles$(miles) + " away · " + esc(o.sec) + "</div>" +
+        '<div>Former students earn ' + fmt$(o.ea) + ' <span style="white-space:nowrap">(<span class="' + (de >= 0 ? "pos" : "neg") + '">' + (de >= 0 ? "+" : "−") + fmt$(Math.abs(de)) +
+        ' a year</span>)</span> · price ' + price$(o.pr) + ' <span style="white-space:nowrap">(' + (dp <= 0 ? "−" : "+") + fmt$(Math.abs(dp)) + ')</span> · value-added ' + pct(o.va) + (strong ? '' : (o.va <= c.va - 10 && o.vn <= c.vn - 10 ? ' <b>(lower value-added)</b>' : ' (similar value-added)')) +
+        ' · Pell share ' + Math.round(o.pe) + '%' + (o.pc == null ? '' : ' · ' + Math.round(o.pc) + '% of Pell students finished in 6 years') + '</div>' +
+        badges(o) + '</div>';
+    }).join("");
+  if (c.nc) {
+    h += '<div class="note">' + why[c.nc] + '</div>';
+  } else if (c.st.length) {
+    h += '<p><b>Also consider: stronger option nearby.</b> These colleges enroll similar students, cost the same or less for families earning up to $30,000, are no harder to get into, and their value-added is at least 10 points higher than this college\'s (with and without race inputs). That is not proof the college caused the difference.</p>' + optHtml(c.st, true);
+    if (c.cm.length) h += '<p class="muted">Other nearby colleges with similar students, not stronger by our rule:</p>' + optHtml(c.cm.slice(0, 3), false);
+  } else if (c.cm.length) {
+    const allLower = c.cm.every(([oid]) => { const o = byId.get(oid); return o.va <= c.va - 10 && o.vn <= c.vn - 10; });
+    h += (allLower ? '<p><b>No stronger option nearby: this college already has higher value-added</b> than nearby colleges with similar students, the same or lower price and no harder admission.</p>'
+                   : '<p><b>No stronger option nearby.</b> Nearby colleges with similar students, the same or lower price and no harder admission do not beat this one by our rule.</p>') + optHtml(c.cm.slice(0, 4), false);
+  } else if (!c.near) {
+    h += '<p><b>No other rated college of the same level within 25 miles.</b></p>';
+  } else {
+    h += '<p><b>No comparable college within 25 miles.</b> Nearby colleges of the same level enroll different students, cost more, are harder to get into, or are a different kind of school.</p>';
+  }
+  if (c.st.length || c.cm.length) h += '<p class="muted">Before deciding: check that your program is offered, admission and transfer rules, and the aid each college offers you. Minority-serving status, support and belonging are not in these numbers.</p>';
+  h += "</div>";
+  d.innerHTML = h;
+  d.querySelectorAll("button.link").forEach(b => b.addEventListener("click", () => show(+b.dataset.id)));
+  d.scrollIntoView({behavior: "smooth", block: "start"});
+}
+
+// Search
+const q = document.getElementById("q"), ml = document.getElementById("matches");
+q.addEventListener("input", () => {
+  const t = norm(q.value);
+  if (t.length < 2) { ml.style.display = "none"; ml.innerHTML = ""; return; }
+  const words = t.split(" ");
+  const all = C.filter(c => { const hay = norm(c.n + " " + c.c + " " + c.s); return words.every(w => hay.includes(w)); });
+  const hits = all.slice(0, 50);
+  ml.innerHTML = hits.length ? hits.map(c => '<li><button data-id="' + c.id + '">' + esc(c.n) + ' <span class="muted">· ' +
+      esc(c.c) + ", " + esc(c.s) + '</span></button></li>').join("") : '<li class="muted" style="padding:8px 10px">No match among the colleges shown here.</li>';
+  ml.style.display = "block";
+  ml.querySelectorAll("button").forEach(b => b.addEventListener("click", () => { ml.style.display = "none"; show(+b.dataset.id); }));
+});
+
+// Browse
+const st = document.getElementById("st"), lv = document.getElementById("lv"), mx = document.getElementById("mx"),
+      ct = document.getElementById("ct"), rows = document.getElementById("rows");
+const states = [...new Set(C.map(c => c.s))].sort();
+st.innerHTML = '<option value="">Choose a state</option>' + states.map(s => '<option>' + esc(s) + '</option>').join("");
+function render() {
+  const s = st.value, l = lv.value, m = parseFloat(mx.value), city = ct.value.trim().toLowerCase();
+  let list = C.filter(c => (!s || c.s === s) && (!l || c.lv === l) && (isNaN(m) || c.pr <= m) &&
+                           (!city || c.c.toLowerCase().includes(city)));
+  if (!s && !city) list = list.filter(c => c.op);
+  list.sort((a, b) => a.n.localeCompare(b.n));
+  rows.innerHTML = list.slice(0, 400).map(c => '<tr data-id="' + c.id + '"><td>' + esc(c.n) + (c.op ? ' <span class="badge opp">Opportunity</span>' : '') +
+     '</td><td>' + esc(c.c) + ', ' + esc(c.s) + '</td><td>' + esc(c.lv) + '</td><td class="num">' + (c.pr < 0 ? "$0" : fmt$(c.pr)) + '</td><td class="num">' +
+     Math.round(c.pe) + '%</td><td class="num">' + fmt$(c.ea) + '</td><td class="num">' + (c.nc ? "—" : fmt$(c.ex)) + '</td><td class="num ' +
+     (c.nc ? "" : (c.va >= 0 ? "pos" : "neg")) + '">' + (c.nc ? "not rated" : pct(c.va)) + '</td></tr>').join("");
+  rows.querySelectorAll("tr").forEach(r => r.addEventListener("click", () => show(+r.dataset.id)));
+  document.getElementById("shown").textContent = (!s && !city ? "Showing " + list.length + " of the 75 opportunity colleges nationwide (high value-added, many Pell students, low price). Choose a state to see all colleges there." :
+     "Showing " + Math.min(list.length, 400) + " of " + list.length + " colleges.");
+}
+[st, lv, mx, ct].forEach(e => e.addEventListener("input", render));
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+{
+  "ranked_colleges": 2408,
+  "pell_median": 43.0,
+  "high_pell_colleges": 1209,
+  "similar_students": {
+    "definition": "high-Pell colleges with expected earnings within 10% of the high-Pell median",
+    "expected_median_usd": 37032,
+    "all": {
+      "n": 555,
+      "quarters": {
+        "worst": {
+          "n": 139,
+          "median_earnings": 33211.0,
+          "median_expected": 36911.8,
+          "median_net_price": 7720.0,
+          "median_value_added_pct": -8.5
+        },
+        "second": {
+          "n": 139,
+          "median_earnings": 35801.0,
+          "median_expected": 36605.5,
+          "median_net_price": 7824.0,
+          "median_value_added_pct": -2.4
+        },
+        "third": {
+          "n": 138,
+          "median_earnings": 37497.0,
+          "median_expected": 36868.6,
+          "median_net_price": 8505.0,
+          "median_value_added_pct": 2.2
+        },
+        "best": {
+          "n": 139,
+          "median_earnings": 40751.0,
+          "median_expected": 36639.0,
+          "median_net_price": 8755.0,
+          "median_value_added_pct": 9.5
+        }
+      },
+      "gap_best_vs_worst_usd": 7540,
+      "price_best_minus_worst_usd": 1035
+    },
+    "enrollment_2000_plus": {
+      "n": 366,
+      "quarters": {
+        "worst": {
+          "n": 92,
+          "median_earnings": 33650.0,
+          "median_expected": 37027.8,
+          "median_net_price": 5764.5,
+          "median_value_added_pct": -7.9
+        },
+        "second": {
+          "n": 91,
+          "median_earnings": 35801.0,
+          "median_expected": 36561.8,
+          "median_net_price": 6809.0,
+          "median_value_added_pct": -2.1
+        },
+        "third": {
+          "n": 91,
+          "median_earnings": 37362.0,
+          "median_expected": 36840.9,
+          "median_net_price": 6941.0,
+          "median_value_added_pct": 2.1
+        },
+        "best": {
+          "n": 92,
+          "median_earnings": 40040.5,
+          "median_expected": 36679.7,
+          "median_net_price": 8402.0,
+          "median_value_added_pct": 9.0
+        }
+      },
+      "gap_best_vs_worst_usd": 6390,
+      "price_best_minus_worst_usd": 2638
+    },
+    "enrollment_5000_plus": {
+      "n": 205,
+      "quarters": {
+        "worst": {
+          "n": 52,
+          "median_earnings": 34801.0,
+          "median_expected": 37203.8,
+          "median_net_price": 5079.5,
+          "median_value_added_pct": -5.9
+        },
+        "second": {
+          "n": 51,
+          "median_earnings": 35971.0,
+          "median_expected": 36729.0,
+          "median_net_price": 7824.0,
+          "median_value_added_pct": -2.1
+        },
+        "third": {
+          "n": 51,
+          "median_earnings": 37442.0,
+          "median_expected": 36878.0,
+          "median_net_price": 6147.0,
+          "median_value_added_pct": 1.8
+        },
+        "best": {
+          "n": 51,
+          "median_earnings": 40362.0,
+          "median_expected": 37228.6,
+          "median_net_price": 6949.0,
+          "median_value_added_pct": 7.8
+        }
+      },
+      "gap_best_vs_worst_usd": 5561,
+      "price_best_minus_worst_usd": 1870
+    },
+    "level_4-year": {
+      "n": 210,
+      "quarters": {
+        "worst": {
+          "n": 53,
+          "median_earnings": 34117.0,
+          "median_expected": 38170.1,
+          "median_net_price": 13316.0,
+          "median_value_added_pct": -9.1
+        },
+        "second": {
+          "n": 52,
+          "median_earnings": 37201.0,
+          "median_expected": 38049.4,
+          "median_net_price": 12840.5,
+          "median_value_added_pct": -2.5
+        },
+        "third": {
+          "n": 52,
+          "median_earnings": 39572.5,
+          "median_expected": 38495.8,
+          "median_net_price": 13215.0,
+          "median_value_added_pct": 2.9
+        },
+        "best": {
+          "n": 53,
+          "median_earnings": 42186.0,
+          "median_expected": 37895.9,
+          "median_net_price": 11564.0,
+          "median_value_added_pct": 10.9
+        }
+      },
+      "gap_best_vs_worst_usd": 8069,
+      "price_best_minus_worst_usd": -1752
+    },
+    "level_2-year": {
+      "n": 342,
+      "quarters": {
+        "worst": {
+          "n": 86,
+          "median_earnings": 33103.0,
+          "median_expected": 36301.6,
+          "median_net_price": 5493.5,
+          "median_value_added_pct": -8.3
+        },
+        "second": {
+          "n": 85,
+          "median_earnings": 35232.0,
+          "median_expected": 36083.1,
+          "median_net_price": 5879.0,
+          "median_value_added_pct": -2.3
+        },
+        "third": {
+          "n": 85,
+          "median_earnings": 36943.0,
+          "median_expected": 36266.1,
+          "median_net_price": 6629.0,
+          "median_value_added_pct": 1.6
+        },
+        "best": {
+          "n": 86,
+          "median_earnings": 39220.5,
+          "median_expected": 35495.7,
+          "median_net_price": 6748.5,
+          "median_value_added_pct": 8.6
+        }
+      },
+      "gap_best_vs_worst_usd": 6118,
+      "price_best_minus_worst_usd": 1255
+    }
+  },
+  "price_correlation_high_pell": {
+    "with_value_added": 0.088,
+    "with_raw_earnings": 0.378
+  },
+  "top_20_percent_by_raw_earnings": {
+    "n": 482,
+    "high_pell_share": 0.129,
+    "high_pell_share_all_ranked": 0.502,
+    "median_net_price_usd": 14762,
+    "median_net_price_all_ranked_usd": 10578
+  },
+  "local_choice_sets": {
+    "sets": 521,
+    "top_raw_is_top_value_added": 0.48
+  },
+  "also_consider": {
+    "rule": {
+      "radius_miles": 25.0,
+      "level": "bachelor's (50+ bachelor's degrees a year) / 2-year / under 2-year",
+      "expected_earnings_band": 0.1,
+      "pell_share_at_most_lower_by_points": 10.0,
+      "net_price_no_higher": true,
+      "admit_rate_at_most_lower_by_points_or_open": 10.0,
+      "value_added_gap_points_both_versions": 10.0,
+      "never_compared": "tribal, specialized, online-by-design, closed or merged; single-gender never an option"
+    },
+    "high_pell_starting_colleges": 1146,
+    "excluded_high_pell_not_compared": 63,
+    "stronger_option": {
+      "colleges": 45,
+      "first_time_pell_students": 17567
+    },
+    "comparable_but_none_stronger": {
+      "colleges": 177,
+      "first_time_pell_students": 85633
+    },
+    "no_comparable_option": {
+      "colleges": 924,
+      "first_time_pell_students": 302679
+    },
+    "no_same_level_college_within_25mi": {
+      "colleges": 426,
+      "first_time_pell_students": 110041
+    },
+    "median_earnings_difference_usd": 6239,
+    "median_price_difference_usd": -4475,
+    "median_miles": 11.1,
+    "minority_serving_starting_with_option": 32,
+    "option_is_minority_serving": 35,
+    "hbcu_or_pbi_starting_with_option": 8,
+    "hbcu_or_pbi_pointed_to_non_hbcu_pbi": 4,
+    "replication_independent_students": {
+      "stronger_option_pairs": {
+        "all_pairs": 195,
+        "pairs": 151,
+        "starting_colleges": 106,
+        "suggested_colleges": 112,
+        "share_higher": 0.781,
+        "median_gap_pct": 13.4,
+        "ci95_cluster_bootstrap": [
+          0.703,
+          0.85
+        ]
+      },
+      "baseline_nearest_comparable": {
+        "all_pairs": 555,
+        "pairs": 479,
+        "starting_colleges": 479,
+        "suggested_colleges": 359,
+        "share_higher": 0.466,
+        "median_gap_pct": -1.6,
+        "ci95_cluster_bootstrap": [
+          0.417,
+          0.514
+        ]
+      }
+    },
+    "replication_same_start": {
+      "starting_colleges": 55,
+      "nearest_stronger_share_higher": 0.8,
+      "nearest_other_comparable_share_higher": 0.582,
+      "difference_ci95": [
+        0.09,
+        0.364
+      ],
+      "benchmark_dep_higher_then_indep_higher": 0.714,
+      "benchmark_pairs": 430
+    },
+    "distinct_suggested_colleges": 36,
+    "distinct_suggested_minority_serving": 26,
+    "all_ranked_with_stronger_option": 127,
+    "sensitivity": {
+      "15mi_5pts": {
+        "high_pell_with_stronger_option": 42,
+        "replication_share": 0.768
+      },
+      "15mi_10pts": {
+        "high_pell_with_stronger_option": 31,
+        "replication_share": 0.791
+      },
+      "15mi_15pts": {
+        "high_pell_with_stronger_option": 18,
+        "replication_share": 0.833
+      },
+      "25mi_5pts": {
+        "high_pell_with_stronger_option": 72,
+        "replication_share": 0.735
+      },
+      "25mi_10pts": {
+        "high_pell_with_stronger_option": 45,
+        "replication_share": 0.781
+      },
+      "25mi_15pts": {
+        "high_pell_with_stronger_option": 25,
+        "replication_share": 0.807
+      },
+      "50mi_5pts": {
+        "high_pell_with_stronger_option": 159,
+        "replication_share": 0.707
+      },
+      "50mi_10pts": {
+        "high_pell_with_stronger_option": 92,
+        "replication_share": 0.744
+      },
+      "50mi_15pts": {
+        "high_pell_with_stronger_option": 50,
+        "replication_share": 0.781
+      }
+    },
+    "largest_examples": [
+      {
+        "name": "CUNY New York City College of Technology",
+        "city": "Brooklyn",
+        "state": "NY",
+        "option_name": "College of Staten Island CUNY",
+        "option_city": "Staten Island",
+        "miles": 10.9,
+        "net_price_low_income": 3681.0,
+        "option_net_price_low_income": 3243.0,
+        "earnings_dep_10yr": 43757.0,
+        "option_earnings_dep_10yr": 50743.0,
+        "value_added_pct": -12.7,
+        "option_value_added_pct": 3.2,
+        "first_time_pell_students": 1651.0
+      },
+      {
+        "name": "CUNY Brooklyn College",
+        "city": "Brooklyn",
+        "state": "NY",
+        "option_name": "CUNY Bernard M Baruch College",
+        "option_city": "New York",
+        "miles": 7.8,
+        "net_price_low_income": 1466.0,
+        "option_net_price_low_income": 745.0,
+        "earnings_dep_10yr": 55492.0,
+        "option_earnings_dep_10yr": 68220.0,
+        "value_added_pct": 2.7,
+        "option_value_added_pct": 15.8,
+        "first_time_pell_students": 1373.0
+      },
+      {
+        "name": "University of Memphis",
+        "city": "Memphis",
+        "state": "TN",
+        "option_name": "Christian Brothers University",
+        "option_city": "Memphis",
+        "miles": 2.4,
+        "net_price_low_income": 10985.0,
+        "option_net_price_low_income": 8886.0,
+        "earnings_dep_10yr": 43285.0,
+        "option_earnings_dep_10yr": 53200.0,
+        "value_added_pct": -3.3,
+        "option_value_added_pct": 20.5,
+        "first_time_pell_students": 1197.0
+      },
+      {
+        "name": "CUNY Queens College",
+        "city": "Queens",
+        "state": "NY",
+        "option_name": "CUNY Bernard M Baruch College",
+        "option_city": "New York",
+        "miles": 8.4,
+        "net_price_low_income": 1816.0,
+        "option_net_price_low_income": 745.0,
+        "earnings_dep_10yr": 56349.0,
+        "option_earnings_dep_10yr": 68220.0,
+        "value_added_pct": -4.1,
+        "option_value_added_pct": 15.8,
+        "first_time_pell_students": 1040.0
+      },
+      {
+        "name": "ECPI University",
+        "city": "Virginia Beach",
+        "state": "VA",
+        "option_name": "Norfolk State University",
+        "option_city": "Norfolk",
+        "miles": 4.5,
+        "net_price_low_income": 19272.0,
+        "option_net_price_low_income": 11099.0,
+        "earnings_dep_10yr": 33957.0,
+        "option_earnings_dep_10yr": 39185.0,
+        "value_added_pct": -19.0,
+        "option_value_added_pct": 2.8,
+        "first_time_pell_students": 818.0
+      },
+      {
+        "name": "Hudson County Community College",
+        "city": "Jersey City",
+        "state": "NJ",
+        "option_name": "CUNY Hostos Community College",
+        "option_city": "Bronx",
+        "miles": 9.2,
+        "net_price_low_income": 5536.0,
+        "option_net_price_low_income": 4398.0,
+        "earnings_dep_10yr": 35801.0,
+        "option_earnings_dep_10yr": 39339.0,
+        "value_added_pct": -2.8,
+        "option_value_added_pct": 8.8,
+        "first_time_pell_students": 741.0
+      },
+      {
+        "name": "East Los Angeles College",
+        "city": "Monterey Park",
+        "state": "CA",
+        "option_name": "Glendale Community College",
+        "option_city": "Glendale",
+        "miles": 10.1,
+        "net_price_low_income": 9023.0,
+        "option_net_price_low_income": 6488.0,
+        "earnings_dep_10yr": 37578.0,
+        "option_earnings_dep_10yr": 44076.0,
+        "value_added_pct": 0.3,
+        "option_value_added_pct": 12.1,
+        "first_time_pell_students": 676.0
+      },
+      {
+        "name": "New Jersey City University",
+        "city": "Jersey City",
+        "state": "NJ",
+        "option_name": "College of Staten Island CUNY",
+        "option_city": "Staten Island",
+        "miles": 8.2,
+        "net_price_low_income": 10254.0,
+        "option_net_price_low_income": 3243.0,
+        "earnings_dep_10yr": 46706.0,
+        "option_earnings_dep_10yr": 50743.0,
+        "value_added_pct": -9.2,
+        "option_value_added_pct": 3.2,
+        "first_time_pell_students": 671.0
+      }
+    ]
+  },
+  "coverage_first_time_pell_students": {
+    "ranked": 749805,
+    "all_colleges": 1022150,
+    "share": 0.734
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "colleges_in_results_file": 6289,
+  "all_students_earnings_column": {
+    "colleges_with_value": 5831,
+    "distinct_values": 3,
+    "values": [
+      27937.0,
+      36041.0,
+      47921.5
+    ]
+  },
+  "target": {
+    "column": "Median Earnings of Dependent Students Working and Not Enrolled 10 Years After Entry",
+    "colleges_with_value": 4194,
+    "distinct_values": 3350
+  },
+  "shared_earnings_values": {
+    "colleges_sharing_target_value_with_another": 1221,
+    "colleges_in_multi_college_reporting_units": 967,
+    "share_in_multi_college_units": 0.23056747734859323,
+    "largest_unit_size": 23,
+    "n_reporting_units": 3489
+  },
+  "affordability_join": {
+    "colleges_matched_to_low_income_bracket": 3742,
+    "share_matched": 0.8922269909394372,
+    "sector_code_agreement_among_matched": 0.9890432923570284
+  },
+  "colleges_in_affordability_file_any_row": 4120,
+  "hbcu_flag_agreement_between_files": 1.0,
+  "msi_counts": {
+    "HBCU": 94,
+    "TCU": 23,
+    "PBI": 71,
+    "AANAPISI": 184,
+    "HSI": 536
+  },
+  "analysis_rows": 4194,
+  "feature_missing_share": {
+    "pell_share": 0.04458750596089652,
+    "pct_black": 0.02050548402479733,
+    "pct_latino": 0.02050548402479733,
+    "pct_asian": 0.02050548402479733,
+    "pct_white": 0.02050548402479733,
+    "pct_aian": 0.02050548402479733,
+    "pct_nhpi": 0.02050548402479733,
+    "pct_two_plus": 0.02050548402479733,
+    "pct_women": 0.02050548402479733,
+    "pct_age25plus": 0.02050548402479733,
+    "pct_part_time": 0.005484024797329518,
+    "pct_distance_only": 0.02050548402479733,
+    "pct_ftft": 0.02050548402479733,
+    "log_enrollment": 0.016690510252742013,
+    "admit_rate": 0.5977587029089175,
+    "sat_math_25": 0.7706247019551741,
+    "sat_erw_25": 0.7708631378159275,
+    "act_math_25": 0.7830233667143538,
+    "open_admissions": 0.011444921316165951,
+    "sector": 0.0,
+    "carnegie": 0.0,
+    "urbanization": 0.0,
+    "size_category": 0.0,
+    "state": 0.0
+  }
+}

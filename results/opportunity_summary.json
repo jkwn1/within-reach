@@ -1,0 +1,104 @@
+{
+  "rules": {
+    "min_enrollment": 500,
+    "value_added_at_least_pct": 10.0,
+    "pell_share_at_least_median": 43.0,
+    "net_price_low_income_at_most_median_usd": 10578.5,
+    "own_earnings_figure_only": true
+  },
+  "n_ranked": 2408,
+  "n_opportunity_colleges": 75,
+  "n_robust_no_race": 61,
+  "n_borderline": 30,
+  "opportunity_by_sector": {
+    "Public 2-year": 36,
+    "Public 4-year": 29,
+    "Private nonprofit 4-year": 7,
+    "Public <2-year": 2,
+    "For-profit 4-year": 1
+  },
+  "opportunity_msi_counts": {
+    "HBCU": 2,
+    "HSI": 30,
+    "TCU": 2,
+    "PBI": 6,
+    "AANAPISI": 4,
+    "n": 75
+  },
+  "ranked_msi_counts": {
+    "HBCU": 82,
+    "HSI": 450,
+    "TCU": 11,
+    "PBI": 65,
+    "AANAPISI": 160,
+    "n": 2408
+  },
+  "n_opportunity_california": 4,
+  "n_opportunity_bay_area": 0,
+  "california_opportunity_colleges": [
+    {
+      "name": "West Hills College-Lemoore",
+      "city": "Lemoore",
+      "sector_name": "Public 2-year",
+      "value_added_pct": 18.3,
+      "net_price_low_income": 6534.0,
+      "pell_share": 60.0,
+      "robust_no_race": true,
+      "borderline": false
+    },
+    {
+      "name": "University of California-Merced",
+      "city": "Merced",
+      "sector_name": "Public 4-year",
+      "value_added_pct": 14.4,
+      "net_price_low_income": 8572.0,
+      "pell_share": 65.0,
+      "robust_no_race": true,
+      "borderline": false
+    },
+    {
+      "name": "California State University-Channel Islands",
+      "city": "Camarillo",
+      "sector_name": "Public 4-year",
+      "value_added_pct": 13.4,
+      "net_price_low_income": 7077.0,
+      "pell_share": 53.0,
+      "robust_no_race": true,
+      "borderline": false
+    },
+    {
+      "name": "Glendale Community College",
+      "city": "Glendale",
+      "sector_name": "Public 2-year",
+      "value_added_pct": 12.1,
+      "net_price_low_income": 6488.0,
+      "pell_share": 45.0,
+      "robust_no_race": true,
+      "borderline": true
+    }
+  ],
+  "bay_area": {
+    "n_ranked": 41,
+    "n_value_added_at_least_threshold": 14,
+    "n_pell_at_least_median": 5,
+    "n_price_at_most_median": 24
+  },
+  "n_hidden_gems": 24,
+  "hidden_gem_msi_counts": {
+    "HBCU": 0,
+    "HSI": 8,
+    "TCU": 1,
+    "PBI": 3,
+    "AANAPISI": 0,
+    "n": 24
+  },
+  "student_parents_at_opportunity_colleges": {
+    "n_with_child_care_data": 70,
+    "median_center_care_gap_usd": 17658.295,
+    "median_total_weekly_work_hours": 50.364999999999995,
+    "median_gap_without_children_usd": 1572.0,
+    "median_total_weekly_work_hours_without_children": 13.4
+  },
+  "median_net_price_low_income_opportunity_usd": 6859.0,
+  "median_value_added_opportunity_pct": 13.62004322785908
+}

@@ -1,0 +1,16 @@
+unit_id,name,city,state,sector_name,enrollment,pell_share,earnings_dep_10yr,test_pred_gbm,error_usd,error_pct
+188526,Albany College of Pharmacy and Health Sciences,Albany,NY,Private nonprofit 4-year,1078.0,32.0,118349.0,67929.70803424375,-50419.291965756245,-42.60221207256186
+122296,Samuel Merritt University,Oakland,CA,Private nonprofit 4-year,2048.0,,114903.0,70963.71580330787,-43939.284196692126,-38.240328099955725
+196255,SUNY Downstate Health Sciences University,Brooklyn,NY,Public 4-year,2117.0,,123600.0,81564.17037185487,-42035.82962814513,-34.00957089655755
+436818,University of Connecticut-Waterbury Campus,Waterbury,CT,Public 4-year,795.0,55.0,72439.0,46472.04042185701,-25966.95957814299,-35.84665660506493
+147590,National University of Health Sciences,Lombard,IL,Private nonprofit 4-year,466.0,,36733.0,61598.226765633386,24865.226765633386,67.69179420584592
+436836,University of Connecticut-Stamford,Stamford,CT,Public 4-year,2405.0,55.0,72439.0,47983.794695716766,-24455.205304283234,-33.759722393024795
+449339,American Public University System,Charles Town,WV,For-profit 4-year,48298.0,55.0,62510.0,38174.99432728295,-24335.005672717052,-38.92978031149744
+413413,Capella University,Minneapolis,MN,For-profit 4-year,38716.0,80.0,63946.0,40323.93634432299,-23622.06365567701,-36.940643129635966
+475200,Whitworth University-Adult Degree Programs,Spokane,WA,Private nonprofit 4-year,227.0,,59230.0,36352.47729707777,-22877.52270292223,-38.624890600915464
+214023,ASPIRA City College,Philadelphia,PA,Private nonprofit 2-year,8.0,50.0,17350.0,39691.82772401806,22341.82772401806,128.77134134880728
+213163,UPMC Jameson School of Nursing,New Castle,PA,Private nonprofit 2-year,271.0,71.0,58637.0,37313.781165619424,-21323.218834380576,-36.364784750892056
+409616,Roger Williams University School of Law,Bristol,RI,Private nonprofit 4-year,525.0,,65748.0,44655.688454465744,-21092.311545534256,-32.080537119812405
+216162,St Lukes Hospital School of Nursing,Bethlehem,PA,Private nonprofit <2-year,301.0,,60549.0,39457.34986257314,-21091.650137426863,-34.83401895560102
+436827,University of Connecticut-Avery Point,Groton,CT,Public 4-year,522.0,40.0,72439.0,51360.63738839763,-21078.362611602373,-29.098086129850454
+188687,American Academy McAllister Institute of Funeral Service,New York,NY,Private nonprofit 2-year,412.0,67.0,55564.0,34769.382723686074,-20794.617276313926,-37.42462255473674

@@ -1,0 +1,51 @@
+{
+  "bottom20_meta": {
+    "n_colleges_ranked": 2496,
+    "raw_earnings_cutoff_usd": 34769.0,
+    "value_added_cutoff_pct": -6.793270064653079
+  },
+  "largest_abs_bias_groups_crossfit": [
+    {
+      "dimension": "Minority-serving designation",
+      "group": "TCU",
+      "n": 23,
+      "mean_signed_error_pct": 9.30009215478017,
+      "mae_usd": 4809.118371475539
+    },
+    {
+      "dimension": "Region",
+      "group": "Territories",
+      "n": 118,
+      "mean_signed_error_pct": 3.973914650555349,
+      "mae_usd": 2888.5539663113605
+    },
+    {
+      "dimension": "Sector",
+      "group": "Nonprofit/for-profit 2-year",
+      "n": 474,
+      "mean_signed_error_pct": 2.54657870688975,
+      "mae_usd": 5417.228997144501
+    },
+    {
+      "dimension": "Sector",
+      "group": "Less-than-2-year",
+      "n": 717,
+      "mean_signed_error_pct": 1.809573056418116,
+      "mae_usd": 4344.323994487952
+    },
+    {
+      "dimension": "Region",
+      "group": "West",
+      "n": 812,
+      "mean_signed_error_pct": 1.7343790455211592,
+      "mae_usd": 5025.259645616772
+    },
+    {
+      "dimension": "Minority-serving designation",
+      "group": "HBCU",
+      "n": 94,
+      "mean_signed_error_pct": 1.5269629959463518,
+      "mae_usd": 2462.4786557342636
+    }
+  ]
+}
